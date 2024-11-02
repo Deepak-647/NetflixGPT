@@ -10,6 +10,7 @@ import { auth } from "./utils/firebase";
  
 import { addUser } from "./utils/userSlice";
 import { useDispatch } from "react-redux";
+import { BODY_IMG, PHOTO_URL } from "./utils/constants";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -41,7 +42,7 @@ const Login = () => {
           updateProfile(user, {
             displayName: name.current.value,
             photoURL:
-              "https://avatars.githubusercontent.com/u/82494501?v=4&size=64",
+              PHOTO_URL
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -95,7 +96,7 @@ const Login = () => {
         <img
           alt="body-img"
           className="absolute opacity-95"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/7c0e18aa-2c95-474d-802e-7f30e75dcca4/web/IN-en-20241014-TRIFECTA-perspective_e7121311-c11e-4809-a3e6-22abffa33569_large.jpg"
+          src= {BODY_IMG}
         />
       </div>
       <form
