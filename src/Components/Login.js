@@ -25,7 +25,7 @@ const Login = () => {
   const handleButtonClick = () => {
     //validate the form data
     const message = validateData(email.current.value, password.current.value);
-    //  console.log(message)
+   
     setErrorMessage(message);
 
     if (message) return;
@@ -38,7 +38,7 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
+           
           updateProfile(user, {
             displayName: name.current.value,
             photoURL:
@@ -76,7 +76,7 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
+         
         
         })
         .catch((error) => {
