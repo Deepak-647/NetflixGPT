@@ -9,7 +9,7 @@ export const API_OPTIONS = {
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNjk4MTI4MjczZTlhZTI3ODQ1YjI2NTI4NjM5NzcwZSIsIm5iZiI6MTczMDUyNjM4Ni42NzUxNjk3LCJzdWIiOiI2M2ZiMDE2NDZhYThlMDAwZjBiNmJmZTEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.fzrRBofBiKM3fK5UPaVy__Uow9SK_1Eg9ztOLkOac1I",
+      "Bearer" + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -24,3 +24,5 @@ export const SUPPORTED_LANGUAGE = [
   {identifier:"bangla",name:"Bangla"},
   {identifier:"odia",name:"Odia"},
 ]
+
+export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
