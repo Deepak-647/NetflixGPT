@@ -37,7 +37,7 @@ const GPTSearchBar = () => {
     //Do this when subscribe to OPENAI
     // const gptMovies = gptResults.choices?.[0]?.message?.content.split(",")
 
-    const gptMovies = "Iron Man, SuperMan, Hulk, Avengers, Black Panther".split(
+    const gptMovies = "Iron Man, SuperMan, Avengers, Hulk, Black Panther".split(
       ","
     );
 
@@ -46,7 +46,7 @@ const GPTSearchBar = () => {
     const tmdbResults = await Promise.all(promiseArray);
     // console.log(tmdbResults);
 
-    dispatch(addGptMovieResults(tmdbResults));
+    dispatch(addGptMovieResults({movieNames : gptMovies , movieResults:tmdbResults}));
   };
   return (
     <div className="pt-[10%] flex justify-center">

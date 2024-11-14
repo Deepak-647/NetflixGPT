@@ -8,7 +8,7 @@ const GPTSearchPage = () => {
     <div>
         <img
           alt="body-img"
-          className="absolute opacity-95 -z-10"
+          className="fixed opacity-95 -z-10"
           src= {BODY_IMG}
         />
       <GPTSearchBar/>
