@@ -37,7 +37,7 @@ const GPTSearchBar = () => {
     //Do this when subscribe to OPENAI
     // const gptMovies = gptResults.choices?.[0]?.message?.content.split(",")
 
-    const gptMovies = "Iron Man, SuperMan, Avengers, Hulk, Black Panther".split(
+    const gptMovies = "Iron Man, SuperMan, Avengers, Raaz, Hera Pheri, Don, Karan Arjun, Hulk, Black Panther".split(
       ","
     );
 
