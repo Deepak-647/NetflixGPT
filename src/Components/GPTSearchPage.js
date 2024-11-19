@@ -1,20 +1,25 @@
-import React from 'react'
-import GPTSearchBar from './GPTSearchBar'
-import GPTMovieSuggestion from './GPTMovieSuggestion'
-import { BODY_IMG } from './utils/constants'
+import React from "react";
+import GPTSearchBar from "./GPTSearchBar";
+import GPTMovieSuggestion from "./GPTMovieSuggestion";
+import { BODY_IMG } from "./utils/constants";
 
 const GPTSearchPage = () => {
   return (
-    <div>
+    <>
+      <div className="absolute -z-10">
         <img
           alt="body-img"
-          className="fixed opacity-95 -z-10"
-          src= {BODY_IMG}
+          className="opacity-95 h-screen w-screen object-cover"
+          src={BODY_IMG}
         />
-      <GPTSearchBar/>
-      <GPTMovieSuggestion/>
-    </div>
-  )
-}
+      </div>
 
-export default GPTSearchPage
+      <div className="">
+        <GPTSearchBar />
+        <GPTMovieSuggestion />
+      </div>
+    </>
+  );
+};
+
+export default GPTSearchPage;

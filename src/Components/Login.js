@@ -95,13 +95,13 @@ const Login = () => {
       <div>
         <img
           alt="body-img"
-          className="absolute opacity-95"
+          className="absolute h-screen w-screen object-cover opacity-95"
           src= {BODY_IMG}
         />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute w-3/12 p-12 my-36 mx-auto right-0 left-0 bg-black text-white rounded-lg bg-opacity-80"
+        className="absolute w-[80%] md:w-3/12 p-12 my-36 mx-auto right-0 left-0 bg-black text-white rounded-lg bg-opacity-80"
       >
         <h1 className=" font-bold text-3xl py-4">
           {isSignIn ? "Sign In" : "Sign Up"}
